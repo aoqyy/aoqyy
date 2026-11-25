@@ -1,16 +1,30 @@
-## Hi there 👋
+```
+$ whoami
+aoki \\ 20yo \\ saint petersburg, utc+3
+software \\ electronics \\ engineering
+```
 
-<!--
-**aoqyy/aoqyy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+```
+$ cat now.txt
+> currently  building small projects for experience
+>            putting together a portfolio
+>            studying at uni
+> learning   electronics \\ engineering \\ web \\ software
+```
 
-Here are some ideas to get you started:
+```
+$ ls ~/stack
+python/   scipy/      statistics/
+vscode/   obsidian/
+```
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```
+$ cat ~/projects/lab-calc/README
+mean, std, std of the mean, student's t confidence error
+-> github.com/aoqyy/lab-calc
+```
+
+```
+$ echo $STATUS
+:shipit: shipping small things, learning
+```
