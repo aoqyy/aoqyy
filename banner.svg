@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180" role="img" aria-label="aoki">
+  <rect width="800" height="180" rx="10" fill="#000"/>
+  <rect x="0.5" y="0.5" width="799" height="179" rx="10" fill="none" stroke="#2a2a2a"/>
+
+  <g font-family="JetBrains Mono, Consolas, Menlo, monospace">
+    <text x="40" y="48" font-size="16" fill="#777">C:\aoki&gt; <tspan fill="#fff">whoami</tspan></text>
+
+    <!-- name with a blinking block cursor -->
+    <text x="40" y="118" font-size="60" font-weight="700" fill="#fff">aoki</text>
+    <rect x="192" y="75" width="28" height="48" fill="#fff">
+      <animate attributeName="opacity" values="1;0" keyTimes="0;0.5" dur="1s" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="40" y="150" font-size="16" fill="#777">software \\ electronics \\ engineering</text>
+
+    <g font-size="14" fill="#777" text-anchor="end">
+      <text x="760" y="80">saint petersburg · utc+3</text>
+      <text x="760" y="104">building small things</text>
+      <text x="760" y="128"><tspan fill="#fff">aoqyy.github.io</tspan></text>
+    </g>
+  </g>
+</svg>
