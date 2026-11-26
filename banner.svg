@@ -9,7 +9,10 @@
     text { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, Menlo, monospace; font-size: 15px; fill: var(--fg); }
     .win { fill: var(--bg); stroke: var(--line); }
     .bar { fill: var(--line); }
-    .dot { fill: var(--dot); }
+    .dot { stroke: rgb(0 0 0 / 0.15); stroke-width: 0.5; }
+    .red { fill: #ff5f57; }
+    .yellow { fill: #febc2e; }
+    .green { fill: #28c840; }
     .title { font-size: 13px; fill: var(--muted); }
     .p { fill: var(--muted); }
     .m { fill: var(--muted); }
@@ -35,9 +38,9 @@
   <!-- window -->
   <rect class="win" x="0.5" y="0.5" width="799" height="539" rx="10"/>
   <path class="bar" d="M0.5 36.5 H799.5" stroke="var(--line)"/>
-  <circle class="dot" cx="22" cy="18" r="6"/>
-  <circle class="dot" cx="42" cy="18" r="6"/>
-  <circle class="dot" cx="62" cy="18" r="6"/>
+  <circle class="dot red" cx="22" cy="18" r="6"/>
+  <circle class="dot yellow" cx="42" cy="18" r="6"/>
+  <circle class="dot green" cx="62" cy="18" r="6"/>
   <text class="title" x="400" y="23" text-anchor="middle">aoki@github: ~</text>
 
   <!-- $ whoami -->
