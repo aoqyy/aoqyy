@@ -1,85 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" xml:space="preserve" role="img" aria-label="aoki: software, electronics, engineering. Shipped motd, planning a free llm router, studying electronics engineering.">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="584" viewBox="0 0 800 584" role="img" aria-label="aoki: software \\ electronics \\ engineering">
   <style>
-    :root {
-      --bg: #161b22; --line: #30363d; --fg: #e6edf3; --muted: #8b949e; --dot: #30363d;
-    }
-    @media (prefers-color-scheme: light) {
-      :root { --bg: #f6f8fa; --line: #d0d7de; --fg: #1f2328; --muted: #59636e; --dot: #d0d7de; }
-    }
-    text { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, Menlo, monospace; font-size: 15px; fill: var(--fg); }
-    .win { fill: var(--bg); stroke: var(--line); }
-    .bar { fill: var(--line); }
-    .dot { stroke: rgb(0 0 0 / 0.15); stroke-width: 0.5; }
-    .red { fill: #ff5f57; }
-    .yellow { fill: #febc2e; }
-    .green { fill: #28c840; }
-    .title { font-size: 13px; fill: var(--muted); }
-    .p { fill: var(--muted); }
-    .m { fill: var(--muted); }
-    .cur { fill: var(--fg); animation: blink 1s steps(1) infinite; }
-
-    /* lines fade in one by one, delay is set per line */
-    .l { opacity: 0; animation: show 0.15s ease-out forwards; }
-
-    /* a cover in the background color shrinks to the right, revealing a command letter by letter */
-    .c { fill: var(--bg); transform-box: fill-box; transform-origin: right; animation-fill-mode: both; animation-name: type; }
-
-    @keyframes show { to { opacity: 1; } }
-    @keyframes type { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+    .bg { fill: #ffffff; stroke: #d0d0d0; }
+    .bar { fill: #f4f4f4; }
+    .line { stroke: #d0d0d0; }
+    .dot { fill: none; stroke: #999999; stroke-width: 1.5; }
+    .dot.on { fill: #999999; }
+    text { font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace; font-size: 14px; white-space: pre; }
+    .title { fill: #666666; font-size: 12px; }
+    .p { fill: #000000; font-weight: 700; }
+    .o { fill: #333333; }
+    .m { fill: #666666; }
+    .cur { fill: #000000; animation: blink 1s steps(1) infinite; }
     @keyframes blink { 50% { opacity: 0; } }
-
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d0d0d; stroke: #2a2a2a; }
+      .bar { fill: #161616; }
+      .line { stroke: #2a2a2a; }
+      .dot { stroke: #666666; }
+      .dot.on { fill: #666666; }
+      .title, .m { fill: #8a8a8a; }
+      .p { fill: #ffffff; }
+      .o { fill: #d6d6d6; }
+      .cur { fill: #ffffff; }
+    }
     @media (prefers-reduced-motion: reduce) {
-      .l { opacity: 1; animation: none; }
-      .c { display: none; }
       .cur { animation: none; }
     }
   </style>
 
   <!-- window -->
-  <rect class="win" x="0.5" y="0.5" width="799" height="539" rx="10"/>
-  <path class="bar" d="M0.5 36.5 H799.5" stroke="var(--line)"/>
-  <circle class="dot red" cx="22" cy="18" r="6"/>
-  <circle class="dot yellow" cx="42" cy="18" r="6"/>
-  <circle class="dot green" cx="62" cy="18" r="6"/>
-  <text class="title" x="400" y="23" text-anchor="middle">aoki@github: ~</text>
+  <rect class="bg" x="0.5" y="0.5" width="799" height="583" rx="10"/>
+  <path class="bar" d="M10.5 0.5 H789.5 A10 10 0 0 1 799.5 10.5 V36 H0.5 V10.5 A10 10 0 0 1 10.5 0.5 Z"/>
+  <line class="line" x1="0.5" y1="36" x2="799.5" y2="36"/>
+  <circle class="dot on" cx="22" cy="18" r="5"/>
+  <circle class="dot" cx="40" cy="18" r="5"/>
+  <circle class="dot" cx="58" cy="18" r="5"/>
+  <text class="title" x="400" y="22" text-anchor="middle">aoki@github: ~</text>
 
-  <!-- $ whoami -->
-  <g class="l" style="animation-delay:0.2s"><text class="p" x="28" y="76">C:\aoki&gt;</text></g>
-  <text x="118" y="76">whoami</text>
-  <rect class="c" x="114" y="59" width="66" height="24" style="animation-duration:0.5s;animation-delay:0.3s;animation-timing-function:steps(6)"/>
-  <g class="l" style="animation-delay:1.0s"><text x="28" y="100">aoki \\ 20yo \\ saint petersburg, utc+3</text></g>
-  <g class="l" style="animation-delay:1.1s"><text class="m" x="28" y="124">software \\ electronics \\ engineering</text></g>
+  <!-- whoami -->
+  <text class="p" x="24" y="68">C:\aoki&gt;whoami</text>
+  <text class="o" x="24" y="90">aoki \\ 20yo \\ saint petersburg, utc+3</text>
+  <text class="m" x="24" y="112">software \\ electronics \\ engineering</text>
 
-  <!-- $ cat now.txt -->
-  <g class="l" style="animation-delay:1.5s"><text class="p" x="28" y="160">C:\aoki&gt;</text></g>
-  <text x="118" y="160">cat now.txt</text>
-  <rect class="c" x="114" y="143" width="113" height="24" style="animation-duration:0.8s;animation-delay:1.6s;animation-timing-function:steps(11)"/>
-  <g class="l" style="animation-delay:2.6s"><text x="28" y="184"><tspan class="m">&gt; shipped   </tspan> motd v1.3, a terminal-style start page</text></g>
-  <g class="l" style="animation-delay:2.7s"><text x="28" y="208"><tspan class="m">&gt; planning  </tspan> a free llm router for ai agents</text></g>
-  <g class="l" style="animation-delay:2.8s"><text x="28" y="232"><tspan class="m">&gt; studying  </tspan> electronics engineering at uni</text></g>
-  <g class="l" style="animation-delay:2.9s"><text x="28" y="256"><tspan class="m">&gt; learning  </tspan> web \\ linux \\ security</text></g>
+  <!-- now -->
+  <text class="p" x="24" y="148">C:\aoki&gt;cat now.txt</text>
+  <text class="o" x="24" y="170">&gt; shipped    motd v1.3, a terminal-style start page</text>
+  <text class="o" x="24" y="192">&gt; building   sluice v0.1, an llm router for ai agents</text>
+  <text class="o" x="24" y="214">&gt; studying   electronics engineering at uni</text>
+  <text class="o" x="24" y="236">&gt; learning   web \\ linux \\ security</text>
 
-  <!-- $ ls ~/stack -->
-  <g class="l" style="animation-delay:3.3s"><text class="p" x="28" y="292">C:\aoki&gt;</text></g>
-  <text x="118" y="292">ls ~/stack</text>
-  <rect class="c" x="114" y="275" width="104" height="24" style="animation-duration:0.7s;animation-delay:3.4s;animation-timing-function:steps(10)"/>
-  <g class="l" style="animation-delay:4.3s"><text x="28" y="316">python/   scipy/    statistics/   js/   html/   css/</text></g>
-  <g class="l" style="animation-delay:4.4s"><text x="28" y="340">git/      vscode/   obsidian/</text></g>
+  <!-- stack -->
+  <text class="p" x="24" y="272">C:\aoki&gt;ls ~/stack</text>
+  <text class="o" x="24" y="294">python/   fastapi/  scipy/    js/       html/     css/</text>
+  <text class="o" x="24" y="316">git/      docker/   vscode/   obsidian/</text>
 
-  <!-- $ ls ~/projects -->
-  <g class="l" style="animation-delay:4.8s"><text class="p" x="28" y="376">C:\aoki&gt;</text></g>
-  <text x="118" y="376">ls ~/projects</text>
-  <rect class="c" x="114" y="359" width="132" height="24" style="animation-duration:0.8s;animation-delay:4.9s;animation-timing-function:steps(13)"/>
-  <g class="l" style="animation-delay:5.9s"><text x="28" y="400">motd/       <tspan class="m">terminal-style start page     js</tspan></text></g>
-  <g class="l" style="animation-delay:6.0s"><text x="28" y="424">lab-calc/   <tspan class="m">lab measurement statistics    python</tspan></text></g>
-  <g class="l" style="animation-delay:6.1s"><text x="28" y="448">site/       <tspan class="m">my personal site              html</tspan></text></g>
+  <!-- projects -->
+  <text class="p" x="24" y="352">C:\aoki&gt;ls ~/projects</text>
+  <text class="o" x="24" y="374">sluice/     openai-compatible llm router  <tspan class="m">python</tspan></text>
+  <text class="o" x="24" y="396">motd/       terminal-style start page     <tspan class="m">js</tspan></text>
+  <text class="o" x="24" y="418">lab-calc/   lab measurement statistics    <tspan class="m">python</tspan></text>
+  <text class="o" x="24" y="440">site/       my personal site              <tspan class="m">html</tspan></text>
 
-  <!-- $ echo $STATUS -->
-  <g class="l" style="animation-delay:6.5s"><text class="p" x="28" y="484">C:\aoki&gt;</text></g>
-  <text x="118" y="484">echo $STATUS</text>
-  <rect class="c" x="114" y="467" width="122" height="24" style="animation-duration:0.8s;animation-delay:6.6s;animation-timing-function:steps(12)"/>
-  <g class="l" style="animation-delay:7.6s">
-    <text x="28" y="508">shipping small things, learning</text>
-    <rect class="cur" x="322" y="494" width="9" height="18"/>
-  </g>
+  <!-- status -->
+  <text class="p" x="24" y="476">C:\aoki&gt;echo $STATUS</text>
+  <text class="o" x="24" y="498">shipping small things, learning</text>
+
+  <!-- prompt + cursor -->
+  <text class="p" x="24" y="534">C:\aoki&gt;</text>
+  <rect class="cur" x="92" y="521" width="9" height="17"/>
 </svg>
